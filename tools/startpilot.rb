@@ -10,13 +10,17 @@
 # le squelette de l'article sera genere sous jekyll + '_posts' + nom de la gallerie .textile
 require 'date'
 require 'pathname'
+require 'rubygems'
+require 'zip/zipfilesystem'
+#Déclarer des librairies additionnelles, placées au même niveau que le programme  principal
 $LOAD_PATH.unshift( File.dirname(__FILE__)  )
 
 load('config.rb')
 load('photo.rb')
 load('highslide.rb')
 load('article.rb')
-load('sources.rb')
+load('zipper.rb')
+#load('sources.rb')
 conf = Config.load
 
 # TODO tester si connexion internet en cours
@@ -37,10 +41,15 @@ ARGV.each { |image|
 # genHighslide
 path = photoRoot + '/' + year
 base = File.basename(File.dirname(ARGV[0]))
-Highslide.gen(destDir, base, root, path)
+highslide = Highslide.gen(destDir, base, root, path)
 
 #modele article 
 post = Article.gen(root, base)
+
+# Tout mettre dans un zip sous C:\startpilot
+if conf['zip'] then
+Zipper.gen(post, highslide, year, destDir, base, conf)
+end
 
 if conf['start_cmd'] then
   command = conf['start_cmd'] + ' ' + conf['editor'] 
@@ -52,3 +61,5 @@ end
 #help = (posts + '2010-10-10-help.textile').to_s
 system(command + ' ' + post + suffix)
 #system(command + ' ' + help + suffix)
+
+

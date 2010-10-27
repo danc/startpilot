@@ -3,8 +3,8 @@ module_function
   def gen(destDir, base, root, path)
 
     dir = destDir +  base
-
-    File.open((root + '_includes' + base).to_s  + ".html", File::CREAT|File::TRUNC|File::RDWR, 0644) do |out|
+	highslide = (root + '_includes' + base).to_s  + ".html"
+    File.open(highslide, File::CREAT|File::TRUNC|File::RDWR, 0644) do |out|
         Dir.chdir(dir.to_s)
         out << '<notextile>
     <div class="highslide-gallery">
@@ -30,5 +30,6 @@ module_function
     '
 
     end
+	return highslide
   end
 end

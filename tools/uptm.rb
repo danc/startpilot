@@ -19,9 +19,9 @@ end
 site = Pathname.new('_site')
 
 year = Date.today.strftime('%Y')
-
 puts('Mot de passe ?')
 pwd = gets.chomp()
+
 ftp = SyncFTP.new( server , :username => user , :password => pwd , :loglevel => Logger::DEBUG )
 ftp.sync( :local => '_posts', :remote => 'jekyll/_posts' )
 ftp.sync( :local => '_includes', :remote => 'jekyll/_includes' )

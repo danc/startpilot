@@ -1,6 +1,6 @@
 !define VERSION "0.0.6"
 Name "StartPilot ${VERSION}"
-OutFile "StartPilot TriMartolod Data - ${VERSION}.exe"
+OutFile "TriMartolod_Data.exe"
 
 
 InstallDir $TEMP

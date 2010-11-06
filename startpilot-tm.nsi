@@ -1,4 +1,4 @@
-!define VERSION "0.0.8"
+!define VERSION "0.0.9"
 Name "StartPilot ${VERSION}"
 OutFile "StartPilot Installer - ${VERSION}.exe"
 
@@ -37,9 +37,9 @@ file tools\trimartolod_local.bat
 file tools\startpilot.rb 
 file tools\startpilot.yml
 file tools\upload_trimartolod.bat
-;file tools\uptm.rb  
+file tools\uptm.rb  
 file tools\article.rb  
-;file tools\sources.rb  
+file tools\sync.rb  
 file tools\highslide.rb  
 file tools\photo.rb  
 file tools\config.rb  
@@ -59,7 +59,7 @@ sectionEnd
 section
   # create a shortcut in the start menu programs directory
     createShortCut "$SMPROGRAMS\trimartolod local.lnk" "C:\startpilot\tools\trimartolod_local.bat"
-   # createShortCut "$SMPROGRAMS\envoi trimartolod.lnk" "C:\startpilot\tools\upload_trimartolod.bat"
+    createShortCut "$SMPROGRAMS\envoi trimartolod.lnk" "C:\startpilot\tools\upload_trimartolod.bat"
 	createShortCut "$SMPROGRAMS\Notepad++Portable.lnk" "C:\startpilot\tools\Notepad++Portable\Notepad++Portable.exe"
 sectionEnd
 

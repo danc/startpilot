@@ -14,3 +14,9 @@ copyright: © trimartolod.free.fr
 # site_url site download/upload
 site_url: trimartolod.free.fr
 zip: true
+# ftp info
+ftp_url: ftpperso.free.fr
+ftp_user: trimartolod
+# Si nécessaire, infos de proxy
+# proxy_addr: proxy.acme.org
+# proxy_port: 3128

@@ -1,0 +1,120 @@
+---
+layout: basic
+title: Historique StartPilot, un outil pour faciliter la mise à jour du site
+---
+
+----------------------------------------------------------------------
+h1. 2010-11-04 v. 0.0.9
+
+- correction bug librairie syncftp (ftp.passive = true) à ameliorer et remonter au développeur TODO
+- upload possible des fichiers sur le site (sources et html), ce qui permet de mettre le site à jour en direct
+- le mot de passe ftp doit être connu et saisi à la main (TODO : le masquer)
+TODO :
+cacher le mot de passe saisi http://stackoverflow.com/questions/2338889/how-to-hide-password-input-from-terminal-in-ruby-script
+ 
+----------------------------------------------------------------------
+h1. 2010-10-28 v. 0.0.8
+
+- les fichiers générés sont places dans un .zip sous c:\startpilot\modifs.zip
+- ajout gem rubyzip et lib singleton.rb
+- ecriture de la version dans le fichier C:\startpilot\version
+
+
+----------------------------------------------------------------------
+h1. 2010-10-24 v. 0.0.7
+
+- reecriture code ruby pour meilleure portabilité multi-plateforme
+- utilisation modules ruby, meilleure modularité
+- ajout lib pathname, fileutils, find , ftp etc.so au package ruby
+-- upload des fichiers source + générés sur le site (à tester avec machine sans proxy ... -- [TODO])
+-- avant le lancement ejekyll, recupérer les derniers fichiers source depuis le site --
+
+----------------------------------------------------------------------
+h1. 2010-10-04 v. 0.0.6
+
+- fournit Notepad++Portable et l'utilise comme éditeur.
+- n'installe plus ruby, ni ejekyll.exe mais utilise une sous partie de l'installation de ruby (sélectionné par ocra pour la génération de ejekyll.exe)
+- utilisation de "portable image magick":http://www.imagemagick.org/discourse-server/viewtopic.php?f=8&t=12926
+dont seul le binaire convert.exe n'a été gardé, pour réduire la place
+taille installeur réduite de 29 à 9 Mo, moins de place prise sur le disque après installation.
+- renommage du projet de 'Trimartoloader' en *'StartPilot'* (moins dépendant de Trimartolod, peut servir pour d'autres sites)
+- support .jpeg sur le serveur (uniquement infos_asso, faire de même pour autres et tester) [TODO]
+- prise en compte des images .png
+
+BUGS CORRIGES:
+- la modification d'un fichier sous notepad force l'encodage UTF-8, qui ne rend pas correctement le site
+(utiliser notepad++ Encoding/Convert to UTF8 without BOM) ; Fournir un autre éditeur que Notepad windows [OK]
+
+----------------------------------------------------------------------
+h1. 2010-10-01 v. 0.0.5
+
+Après plusieurs tentatives, mise en place du premier jet :
+- empaquetage de ejekyll --server --auto 
+(l'installation de jekyll sous windows est un peu délicate, là au moins c'est un .exe)
+Sert à la génération du site et au test local
+réalisé avec gem ruby ocra, voir wiki perso pour les détails
+- installation silencieuse de Imagemagick (standard)
+- installation silencieuse de Ruby 1.8 (standard)
+- Scripts .bat pour le lancement à partir d'une ou plusieurs photos sélectionnées dans l'explorateur windows (menu click droit/envoyer vers/trimartolod.bat)
+- script ruby pour lier la sauce, générer la gallerie highslide, générer l'article correspondant et l'ouvrir dans notepad, lancer ejekyll, ouvrir le raccourci internet local
+- scrit NSIS pour empaqueter et installer le tout
+- testé sous XP Pro SP3
+
+TODO : 
+- gestion du parefeu windows au lancement d'executables
+- modulariser le .nsi (complet, data)
+- tester espaces et accents dans les noms de chemin
+- tester sous Vista/Seven
+- testé sous windows 2000 semble OK sauf convert.exe de ImageMagick ??? [TODO]
+
+----------------------------------------------------------------------
+h1. 2010-06-20 Annonce 
+
+[...] à terme j'espère réussir à faire un
+ logiciel qui vous permettra depuis votre poste de mettre en ligne
+facilement photos et articles. [...]
+
+En attendant, vous pouvez toujours m'envoyer un simple mail, comme
+d'hab, ou, à peine plus difficile, un fichier texte tout bête basé sur
+les modèles des pages que j'ai aussi mis sur le site:
+
+
+http://trimartolod.free.fr/jekyll/_posts
+par exemple :
+http://trimartolod.free.fr/jekyll/_posts/2010-06-03-nouveau-design-du-site.textile
+
+La date est dans le nom du fichier, l'entête permet de définir les
+mots-clé et certains infos annexes, le reste c'est du texte simple,avec
+très peu de contraintes de formattage, à peu près l'équivalent d'un mail
+en fait...
+
+Le principe, c'est un logiciel malin (jekyll, c'est pas moi qui l'ai
+fait) qui prend en entrée tous ces fichiers, et à partir de modèles de
+pages définis par ailleurs, mouline et génère des pages prêtes à être
+envoyées sur le site.
+
+Pour les images, je pense faire pareil, y compris la partie que personne
+n'aime faire à savoir la réduction et la génération des miniatures
+photo, la création des galleries, etc ...
+
+Une fois tout prêt, il n'y a plus qu'à envoyer en ligne, et basta ...
+Plus de base de données (donc un site plus rapide, c'est votre
+ordinateur qui a déjà fait tout le boulot).
+
+Cela fonctionnerait ainsi :
+- le logiciel se connecte sur le site et récupère les sources de tous
+les articles (http://trimartolod.free.fr/jekyll/_posts) [TODO]
+- il permet de créer un nouvel article source, avec des photos issues de
+votre appareil photo (mais quand même triées par vous dans un répertoire !) [OK]
+- les photos sont réduites, la gallerie est créée localement [OK]
+- le site est regénéré (moins d'une minute actuellement sur ma petite
+machine) [OK]
+- il peut être testé localement pour voir le rendu [OK]
+- un bouton pour synchroniser le tout sur le site [TODO]
+
+Simple, non ?
+Mais il reste encore à mettre en place tout ça, puis à faire un
+installeur Windows (bonne nouvelle ça doit aussi fonctionner sur Mac !).
+Une fois tout cela réalisé, on sera peut-être le premier site au monde à
+fonctionner en peer-to-peer (chacun ayant une copie du site en local sur
+sa machine)

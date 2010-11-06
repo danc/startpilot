@@ -7,6 +7,7 @@ title: Historique StartPilot, un outil pour faciliter la mise à jour du site
 h1. 2010-11-06 v. 0.1
 
 - gestion des sources sous "https://github.com/danc/startpilot":https://github.com/danc/startpilot
+- ajout Additions (reduire-photos.exe et Trimartolod_data.exe)
 
 ----------------------------------------------------------------------
 h1. 2010-11-04 v. 0.0.9

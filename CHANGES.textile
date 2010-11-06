@@ -4,6 +4,11 @@ title: Historique StartPilot, un outil pour faciliter la mise à jour du site
 ---
 
 ----------------------------------------------------------------------
+h1. 2010-11-06 v. 0.1
+
+- gestion des sources sous "https://github.com/danc/startpilot":https://github.com/danc/startpilot
+
+----------------------------------------------------------------------
 h1. 2010-11-04 v. 0.0.9
 
 - correction bug librairie syncftp (ftp.passive = true) à ameliorer et remonter au développeur TODO

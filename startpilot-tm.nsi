@@ -1,19 +1,9 @@
-!define VERSION "0.0.9"
+!define VERSION "0.1"
 Name "StartPilot ${VERSION}"
 OutFile "StartPilot Installer - ${VERSION}.exe"
 
 
 InstallDir $TEMP
-;Section -Prerequisites
-;imagemagick
-;ruby
-; SetOutPath $INSTDIR\Prerequisites
-;  File "..\Prerequisites\ImageMagick-6.6.4-6-Q16-windows-dll.exe"
-;  File "..\Prerequisites\rubyinstaller-1.8.7-p302.exe"
-;  ExecWait "$INSTDIR\Prerequisites\ImageMagick-6.6.4-6-Q16-windows-dll.exe /SILENT "
-;  ExecWait '$INSTDIR\Prerequisites\rubyinstaller-1.8.7-p302.exe /SILENT /tasks="assocfiles,modpath"'
-;SectionEnd
-
 
 section
 setOutPath $SENDTO
@@ -58,8 +48,8 @@ sectionEnd
 
 section
   # create a shortcut in the start menu programs directory
-    createShortCut "$SMPROGRAMS\trimartolod local.lnk" "C:\startpilot\tools\trimartolod_local.bat"
-    createShortCut "$SMPROGRAMS\envoi trimartolod.lnk" "C:\startpilot\tools\upload_trimartolod.bat"
+  createShortCut "$SMPROGRAMS\trimartolod local.lnk" "C:\startpilot\tools\trimartolod_local.bat"
+  createShortCut "$SMPROGRAMS\envoi trimartolod.lnk" "C:\startpilot\tools\upload_trimartolod.bat"
 	createShortCut "$SMPROGRAMS\Notepad++Portable.lnk" "C:\startpilot\tools\Notepad++Portable\Notepad++Portable.exe"
 sectionEnd
 

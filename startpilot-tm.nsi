@@ -11,11 +11,6 @@ setOutPath $SENDTO
 file tools\trimartolod.bat
 sectionEnd
 
-section
-# jekyll specific
-setOutPath $HOME
-file /r configs\config.yml
-sectionEnd
 
 section
 # jekyll specific
@@ -31,7 +26,7 @@ section
 setOutPath C:\startpilot\tools
 file tools\trimartolod_local.bat
 file tools\startpilot.rb 
-;file tools\startpilot.yml
+file tools\configs\startpilot.yml
 file tools\upload_trimartolod.bat
 file tools\uptm.rb  
 file tools\article.rb  
@@ -53,9 +48,9 @@ sectionEnd
 
 section
   # create a shortcut in the start menu programs directory
-  createShortCut "$SMPROGRAMS\trimartolod local.lnk" "C:\startpilot\tools\trimartolod_local.bat"
-  createShortCut "$SMPROGRAMS\envoi trimartolod.lnk" "C:\startpilot\tools\upload_trimartolod.bat"
-	createShortCut "$SMPROGRAMS\Notepad++Portable.lnk" "C:\startpilot\tools\Notepad++Portable\Notepad++Portable.exe"
+  createShortCut "$SMPROGRAMS\StartPilot\trimartolod local.lnk" "C:\startpilot\tools\trimartolod_local.bat"
+  createShortCut "$SMPROGRAMS\StartPilot\envoi trimartolod.lnk" "C:\startpilot\tools\upload_trimartolod.bat"
+	createShortCut "$SMPROGRAMS\StartPilot\Notepad++Portable.lnk" "C:\startpilot\tools\Notepad++Portable\Notepad++Portable.exe"
 sectionEnd
 
 section

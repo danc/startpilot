@@ -6,22 +6,22 @@ title: Historique StartPilot, un outil pour faciliter la mise à jour du site
 ----------------------------------------------------------------------
 h1. 2010-11-07 v. 0.2
 
-- gestion des fichiers de config identique sous win et linux ($HOME). On cherche d'abord startpilot.yml, puis .startpilot
+- gestion des fichiers de config identique sous win et linux ($HOME). 
+On cherche d'abord startpilot.yml dans le répertoire courant, puis dans $HOME, puis $HOME/.startpilot
+- [WIN] les racourcis propres à startpilot sont places dans un menu "$SMPROGRAMS\StartPilot
 
 ----------------------------------------------------------------------
 h1. 2010-11-06 v. 0.1
 
 - gestion des sources sous "https://github.com/danc/startpilot":https://github.com/danc/startpilot
-- ajout Additions (reduire-photos.exe et Trimartolod_data.exe)
+- [WIN] ajout Additions (reduire-photos.exe et Trimartolod_data.exe)
 
 ----------------------------------------------------------------------
 h1. 2010-11-04 v. 0.0.9
 
-- correction bug librairie syncftp (ftp.passive = true) à ameliorer et remonter au développeur TODO
+- correction bug librairie syncftp (ftp.passive = true) à ameliorer et remonter à glejeune [OK]
 - upload possible des fichiers sur le site (sources et html), ce qui permet de mettre le site à jour en direct
-- le mot de passe ftp doit être connu et saisi à la main (TODO : le masquer)
-TODO :
-cacher le mot de passe saisi http://stackoverflow.com/questions/2338889/how-to-hide-password-input-from-terminal-in-ruby-script
+- le mot de passe ftp doit être connu et saisi à la main 
  
 ----------------------------------------------------------------------
 h1. 2010-10-28 v. 0.0.8
@@ -29,7 +29,6 @@ h1. 2010-10-28 v. 0.0.8
 - les fichiers générés sont places dans un .zip sous c:\startpilot\modifs.zip
 - ajout gem rubyzip et lib singleton.rb
 - ecriture de la version dans le fichier C:\startpilot\version
-
 
 ----------------------------------------------------------------------
 h1. 2010-10-24 v. 0.0.7

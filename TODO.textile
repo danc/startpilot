@@ -1,0 +1,21 @@
+---
+layout: basic
+title: StartPilot , reste à faire
+---
+
+TODO :
+
+- cacher le mot de passe saisi http://stackoverflow.com/questions/2338889/how-to-hide-password-input-from-terminal-in-ruby-script
+- upload des fichiers source + générés sur le site (à tester avec machine sans proxy ...  [TODO])
+- avant le lancement ejekyll, recupérer les derniers fichiers source depuis le site 
+- support .jpeg sur le serveur (uniquement infos_asso, faire de même pour autres et tester) [TODO]
+- gestion du parefeu windows au lancement d'executables
+- tester espaces et accents dans les noms de chemin
+- tester sous Vista/Seven
+- testé sous windows 2000 semble OK sauf convert.exe de ImageMagick ??? [TODO]
+
+
+BUGS CORRIGES:
+- la modification d'un fichier sous notepad force l'encodage UTF-8, qui ne rend pas correctement le site
+(utiliser notepad++ Encoding/Convert to UTF8 without BOM) ; Fournir un autre éditeur que Notepad windows [OK]
+

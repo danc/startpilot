@@ -1,19 +1,17 @@
-# repertoire d'installation de startpilot
-startpilot: C:\startpilot
+# Exemple pour linux
 # emplacement des sources du site
-jekyll: C:\startpilot\tm
+jekyll: /home/daniel/itinerant/startpilot/tm
 # sous repertoire maitre pour placer les photos
 photo_master: infos_asso
 # nb pixels de la photo
 size: 1024
 #chemin complet de l'editeur à utiliser pour afficher le fichier généré
-editor: C:\startpilot\tools\Notepad++Portable\Notepad++Portable.exe
-start_cmd: start
+editor: geany
+start_cmd: 
 # marquage des photos par un copyright
 copyright: © trimartolod.free.fr
 # site_url site download/upload
 site_url: trimartolod.free.fr
-zip: true
 # ftp info
 ftp_url: ftpperso.free.fr
 ftp_user: trimartolod

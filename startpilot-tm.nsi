@@ -1,4 +1,4 @@
-!define VERSION "0.1"
+!define VERSION "0.2"
 Name "StartPilot ${VERSION}"
 OutFile "StartPilot Installer - ${VERSION}.exe"
 
@@ -9,6 +9,12 @@ section
 setOutPath $SENDTO
 # define what to install and place it in the output path
 file tools\trimartolod.bat
+sectionEnd
+
+section
+# jekyll specific
+setOutPath $HOME
+file /r configs\config.yml
 sectionEnd
 
 section
@@ -25,7 +31,7 @@ section
 setOutPath C:\startpilot\tools
 file tools\trimartolod_local.bat
 file tools\startpilot.rb 
-file tools\startpilot.yml
+;file tools\startpilot.yml
 file tools\upload_trimartolod.bat
 file tools\uptm.rb  
 file tools\article.rb  
@@ -34,7 +40,6 @@ file tools\highslide.rb
 file tools\photo.rb  
 file tools\config.rb  
 file tools\zipper.rb
-;file tools\ejekyll.exe
 file tools\Tri_Martolod_Local.URL
 sectionEnd
 

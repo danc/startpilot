@@ -4,6 +4,11 @@ title: Historique StartPilot, un outil pour faciliter la mise à jour du site
 ---
 
 ----------------------------------------------------------------------
+h1. 2010-11-07 v. 0.2
+
+- gestion des fichiers de config identique sous win et linux ($HOME). On cherche d'abord startpilot.yml, puis .startpilot
+
+----------------------------------------------------------------------
 h1. 2010-11-06 v. 0.1
 
 - gestion des sources sous "https://github.com/danc/startpilot":https://github.com/danc/startpilot

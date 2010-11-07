@@ -1,10 +1,8 @@
 module Config
 
-
-
   def load
     require 'yaml'
-    conffile = 'startpilot.yml'
+    conffile = ENV['HOME'] + '/startpilot.yml'
     if File.exist?(conffile) then
       #ok
     else

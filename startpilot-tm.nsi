@@ -48,6 +48,7 @@ sectionEnd
 
 section
   # create a shortcut in the start menu programs directory
+  CreateDirectory  "$SMPROGRAMS\StartPilot"
   createShortCut "$SMPROGRAMS\StartPilot\trimartolod local.lnk" "C:\startpilot\tools\trimartolod_local.bat"
   createShortCut "$SMPROGRAMS\StartPilot\envoi trimartolod.lnk" "C:\startpilot\tools\upload_trimartolod.bat"
 	createShortCut "$SMPROGRAMS\StartPilot\Notepad++Portable.lnk" "C:\startpilot\tools\Notepad++Portable\Notepad++Portable.exe"

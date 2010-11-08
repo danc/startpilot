@@ -38,10 +38,9 @@ layout: post
 published: true
 date: ' + date + '
 tags: [ ]
-title: Nouvel article
+title: ' + base + '
 ---
 
-Article en cours de rédaction ...
 
 '
       end

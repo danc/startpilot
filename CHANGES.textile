@@ -4,6 +4,13 @@ title: Historique StartPilot, un outil pour faciliter la mise à jour du site
 ---
 
 ----------------------------------------------------------------------
+h1. 2011-02-12 v. 0.3
+
+- Mise à jour pour gestion de l'arborescence : /:year/:month/:title au lieu de /aticles/:year/:month/:day/:title
+- Amélioration du style général (css, ombrages, html5 audio sur la page d'accueil, fontes Droid, ...)
+- refonte de la page d'accueil, rubrique 'à la une'
+	
+----------------------------------------------------------------------
 h1. 2010-11-07 v. 0.2
 
 - gestion des fichiers de config identique sous win et linux ($HOME). 

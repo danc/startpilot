@@ -13,11 +13,10 @@ module_function
 layout: post
 published: true
 date: ' + date + '
-tags: [ photo, asso, en_cours]
+tags: [ photo ]
 title: ' + base + '
 ---
 
-Article en cours de rédaction ...
 
 {% include ' + base + '.html' +' %}
 

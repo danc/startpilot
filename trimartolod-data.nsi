@@ -10,7 +10,7 @@ section
 setOutPath C:\startpilot\tm
 
 # jekyll specific
-file /r tm\*
+file /r /x *.exe /x _site /x .git /x infos_asso tm\*
 sectionEnd
 
 section

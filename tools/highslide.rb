@@ -11,7 +11,7 @@ module_function
     '
 
         fst = true
-        Dir["*.{jpg,jpeg,png}"].each do |entry|
+        Dir["*.{JPG,jpeg,png}"].each do |entry|
        
           out << '<a href="/' + path + '/' + base + '/' + entry + '" class="highslide" onclick="return hs.expand(this'
           if fst 

@@ -1,4 +1,4 @@
-!define VERSION "0.2"
+!define VERSION "0.3"
 Name "StartPilot ${VERSION}"
 OutFile "StartPilot Installer - ${VERSION}.exe"
 
@@ -15,7 +15,7 @@ sectionEnd
 section
 # jekyll specific
 setOutPath C:\startpilot\tm
-file /r tm\*
+file /r /x *.exe /x _site /x .git /x infos_asso tm\*
 sectionEnd
 
 section

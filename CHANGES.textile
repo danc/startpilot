@@ -4,6 +4,12 @@ title: Historique StartPilot, un outil pour faciliter la mise à jour du site
 ---
 
 ----------------------------------------------------------------------
+h1. 2011-09-14 
+
+- Prise en compte des extensions .jpg
+- ne pas ouvrir l'éditeur si le fichier existe déjà : cela permet de créer les miniatures en rafale depuis un logiciel comme mirage par exemple, sans redonner le focus à l'éditeur de texte. Par contre, si on ajoute des photos après coup, l'éditeur n'est pas ouvert ...
+
+----------------------------------------------------------------------
 h1. 2011-02-12 v. 0.3
 
 - Mise à jour pour gestion de l'arborescence : /:year/:month/:title au lieu de /aticles/:year/:month/:day/:title

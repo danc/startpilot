@@ -44,6 +44,7 @@ base = File.basename(File.dirname(ARGV[0]))
 highslide = Highslide.gen(destDir, base, root, path)
 
 #modele article 
+existing = Article.exists(root, base)
 post = Article.gen(root, base)
 
 # Tout mettre dans un zip sous C:\startpilot
@@ -51,15 +52,16 @@ if conf['zip'] then
 Zipper.gen(post, highslide, year, destDir, base, conf)
 end
 
-if conf['start_cmd'] then
-  command = conf['start_cmd'] + ' ' + conf['editor'] 
-  suffix = ''
-else
-  command = conf['editor'] 
-  suffix = ' &'
+if !existing then
+	if conf['start_cmd'] then
+	  command = conf['start_cmd'] + ' ' + conf['editor'] 
+	  suffix = ''
+	else
+	  command = conf['editor'] 
+	  suffix = ' &'
+	end
+	#help = (posts + '2010-10-10-help.textile').to_s
+	system(command + ' ' + post + suffix)
+	#system(command + ' ' + help + suffix)
 end
-#help = (posts + '2010-10-10-help.textile').to_s
-system(command + ' ' + post + suffix)
-#system(command + ' ' + help + suffix)
-
 
